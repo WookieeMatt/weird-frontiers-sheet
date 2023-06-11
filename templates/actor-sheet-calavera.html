@@ -1,0 +1,74 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Calavera" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-mcc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "WF.calavera"}}</a>
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "calavera.calaveraAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+                <div class="deity flexrow">
+                  <label class="flex1" for="system.class.signatureWeapon">{{localize "WF.signatureWeapon"}}</label>
+                  <input class="flex2" type="text" id="system.class.signatureWeapon.value" name="system.class.signatureWeapon.value" value="{{system.class.signatureWeapon.value}}" data-dtype="Text" style="width: 200px;"/>
+                </div>
+
+                <ul class="class-note flexcol">
+				
+                  <li>
+                    {{localize "WF.boneDance"}}
+                  </li>
+				          <li>
+                    {{localize "WF.deadSpeak"}}</li>
+                  </li>
+                  <li>
+                    {{localize "WF.gloom"}}</li>
+                  </li>
+                  <li>
+                    {{localize "WF.grimConversation"}}</li>
+                  </li>
+                  <li>
+                    {{localize "WF.sideStep"}}</li>
+                  </li>
+                  <li>
+                    {{localize "WF.spookShow"}}</li>
+                  </li>
+                  <li>
+                    {{localize "WF.voidKissed"}}</li>
+                  </li>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+

@@ -1,0 +1,96 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Mutant" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-mcc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "mcc.Mutant"}}</a>
+        <a class="item" data-tab="spells">{{localize "mcc.mutations"}}</a>
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> modules/weird-frontiers-sheet/actor-partial-pc-equipment.html }}
+
+        {{!-- Spells Tab --}}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-mutations.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "mutant.mutantAbilities"}}</h4>
+            <div class="class">
+                <div class="skills-container">
+                    <div class="flexrow" data-skill="mutantHorror">
+                      <label class="flex1" for="system.skills.mutantHorror.value">{{localize "mutant.mutantHorror"}}</label>
+                      <input type="text" id="system.skills.mutantHorror.value" name="system.skills.mutantHorror.value" value="{{system.skills.mutantHorror.value}}" data-dtype="String"/>
+                    </div>
+		<div class="flexrow" data-skill="Max Tech Level">
+                      <label class="flex1" for="system.skills.maxTechLevel.value">{{localize "mcc.maxTechLevel"}}</label>
+                      <input type="text" id="system.skills.maxTechLevel.value" name="system.skills.maxTechLevel.value" value="{{system.skills.maxTechLevel.value}}" data-dtype="String"/>
+                    </div>
+
+                    <div class="flexrow" data-skill="aiRecognition">
+                      <label class="skill-check rollable" for="system.skills.aiRecognition.value">{{localize "mcc.aiRecognition"}}</label>
+                      <input type="text" id="system.skills.aiRecognition.value" name="system.skills.aiRecognition.value" value="{{system.skills.aiRecognition.value}}" data-dtype="String"/>
+                    </div>
+					<div class="flexrow" data-skill="artifactCheck">
+                      <label class="skill-check rollable" for="system.skills.artifactCheck.value">{{localize "mcc.artifactCheck"}}</label>
+                      <input type="text" id="system.skills.artifactCheck.value" name="system.skills.artifactCheck.value" value="{{system.skills.artifactCheck.value}}" data-dtype="String"/>
+                    </div>
+					<input type="hidden" id="system.class.spellCheckAbility" name="system.class.spellCheckAbility" value="">
+                    <div class="wide flexrow" data-ability="">
+                        <label class="spell-check rollable" for="system.class.spellCheck">{{localize "mcc.mutationCheck"}}</label>
+                        <input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{numberFormat system.class.spellCheck decimals=0 sign=true}}" data-dtype="String"/>
+                    </div>
+                </div>
+				 <div class="deity flexrow">
+                    <label class="flex1" for="system.class.archaicAlignment">{{localize "mcc.archaicAlignment"}}</label>
+                   <input class="flex2" type="text" id="system.class.archaicAlignment.value" name="system.class.archaicAlignment.value" value="{{system.class.archaicAlignment.value}}" data-dtype="String"/>
+                </div>
+<div class="deity flexrow">
+                    <label class="flex1" for="system.class.mutantAppearance">{{localize "mcc.mutantAppearance"}}</label>
+                   <input class="flex2" type="text" id="system.class.mutantAppearance.value" name="system.class.mutantAppearance.value" value="{{system.class.mutantAppearance.value}}" data-dtype="String"/>
+                </div>
+
+                <ul class="class-note flexcol">
+				
+                  <li>
+                    {{localize "mutant.mutantHorror"}}
+                    <ul>
+                      <li>{{localize "mutant.mutantHorrorDesc"}}</li>
+                    </ul>
+                  </li>
+                  <li>
+                    {{localize "mcc.ai"}}</li>
+                    <ul>
+                      <li>{{localize "mutant.aiRecognition"}}</li>
+                    </ul>
+                  </li>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+

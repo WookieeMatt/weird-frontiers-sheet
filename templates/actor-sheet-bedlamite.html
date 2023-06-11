@@ -1,0 +1,100 @@
+<form class="{{cssClass}}" autocomplete="off">
+ 
+    {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Bedlamite" data-dtype="String"/>
+    <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+
+    {{!-- Sheet Header --}}
+    {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-mcc-header.html }}
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+        <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+        <a class="item" data-tab="class">{{localize "WF.bedlamite"}}</a>
+        {{#if data.config.showSpells}}
+        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+        {{/if}}
+        {{#if data.config.showSkills}}
+        <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+        {{/if}}
+        <a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Character Tab --}}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-common.html }}
+
+        {{!-- Equipment Tab --}}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html }}
+
+        {{!-- Spells Tab --}}
+        {{> systems/dcc/templates/actor-partial-wizard-spells.html }}
+
+        {{!-- Skills Tab --}}
+        {{> systems/dcc/templates/actor-partial-skills.html }}
+
+        {{!-- Notes Tab --}}
+        {{> systems/dcc/templates/actor-partial-pc-notes.html }}
+
+        {{!-- Class Tab --}}
+        <div class="tab" data-group="primary" data-tab="class">
+            <h4 class="class-label">{{localize "bedlamite.bedlamiteAbilities"}}</h4>
+             <div class="class">
+                <div class="skills-container">
+                  <div class="deity flexrow">
+                    <label class="flex1" for="system.class.signatureWeapon">{{localize "WF.signatureWeapon"}}</label>
+                    <input class="flex2" type="text" id="system.class.signatureWeapon.value" name="system.class.signatureWeapon.value" value="{{system.class.signatureWeapon.value}}" data-dtype="Text" style="width: 200px;"/>
+                  </div>
+                </div>
+                  <!--  <div class="flexrow" data-skill="Naturopathy">
+                      <label class="flex1" for="system.skills.naturopathy.value">{{localize "Healer.naturopathy"}}</label>
+                      <input type="text" id="system.skills.naturopathy.value" name="system.skills.naturopathy.value" value="{{system.skills.naturopathy.value}}" data-dtype="String"/>
+                    </div>
+                    <div class="flexrow" data-skill="aiRecognition">
+                      <label class="skill-check rollable" for="system.skills.aiRecognition.value">{{localize "mcc.aiRecognition"}}</label>
+                      <input type="text" id="system.skills.aiRecognition.value" name="system.skills.aiRecognition.value" value="{{system.skills.aiRecognition.value}}" data-dtype="String"/>
+                    </div>
+                    <div class="flexrow" data-skill="Max Tech Level">
+                      <label class="flex1" for="system.skills.maxTechLevel.value">{{localize "mcc.maxTechLevel"}}</label>
+                      <input type="text" id="system.skills.maxTechLevel.value" name="system.skills.maxTechLevel.value" value="{{system.skills.maxTechLevel.value}}" data-dtype="String"/>
+                    </div>
+
+					          <div class="flexrow" data-skill="artifactCheck">
+                      <label class="skill-check rollable" for="system.skills.artifactCheck.value">{{localize "mcc.artifactCheck"}}</label>
+                      <input type="text" id="system.skills.artifactCheck.value" name="system.skills.artifactCheck.value" value="{{system.skills.artifactCheck.value}}" data-dtype="String"/>
+                    </div>
+                </div>
+				        <div class="deity flexrow">
+                    <label class="flex1" for="system.class.archaicAlignment">{{localize "mcc.archaicAlignment"}}</label>
+                   <input class="flex2" type="text" id="system.class.archaicAlignment.value" name="system.class.archaicAlignment.value" value="{{system.class.archaicAlignment.value}}" data-dtype="String"/>
+                </div> -->
+
+                <ul class="class-note flexcol">
+				
+                  <li>
+                    {{localize "WF.achilles"}}
+                    <ul>
+                      <li>{{localize "bedlamite.achillesDesc"}}</li>
+					          </ul>
+                  </li>
+                  <h4 class="class-label">
+                    {{localize "WF.contraptions"}}
+                  </h4>
+                  <li>{{localize "bedlamite.contraptions"}}</li>  
+                  </li>
+                  <li>{{localize "WF.contraptions2"}}</li>
+                    <ul>
+                      <li>{{localize "bedlamite.contraption1"}}</li>
+                      <li>{{localize "bedlamite.contraption2"}}</li>
+                    </ul>
+                  <li>{{localize "WF.gc"}}</li>
+                  <li>{{localize "bedlamite.mechanical"}}</li>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
