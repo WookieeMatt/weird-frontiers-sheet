@@ -3,7 +3,7 @@
   "name": "weird-frontiers-sheet",
   "title": "Weird Frontiers Sheets",
   "description": "Sheets for Weird Frontiers in FoundryVTT!",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "minimumCoreVersion": "10",
   "compatibleCoreVersion": "11",
   "author": "Matt 'WookieeChan' Rimler",
@@ -11,9 +11,6 @@
   "esmodules": ["module/weird-frontiers-sheet.js"],
   "styles": [
     "styles/weird-frontiers-sheet.css"
-  ],
-  "module": [
-    "module/dcc.js"
   ],
   "languages": [
     {
