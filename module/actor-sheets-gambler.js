@@ -1,23 +1,23 @@
 /**
- * MCC Mutant character sheet overrides
+ * WF Gambler character sheet overrides
  */
 
 import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
 
 /**
- * Extend the zero-level/NPC sheet for MCC Mutant
+ * Extend the zero-level/NPC sheet for WF Gambler
  * @extends {DCCActorSheet}
  */
-class ActorSheetMutant extends DCCActorSheet {
+class ActorSheetGambler extends DCCActorSheet {
   /** @override */
 /**  getData () {
     const data = super.getData() **/
 async getData (options) {
     const data = await super.getData(options)
-    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-mutant.html'
-if (data.system.details.sheetClass !== 'Mutant') {
+    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-gambler.html'
+if (data.system.details.sheetClass !== 'Gambler') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('mcc.Mutant')
+        'data.class.className': game.i18n.localize('WF.gambler')
       })
     }
 
@@ -75,5 +75,5 @@ if (data.system.details.sheetClass !== 'Mutant') {
 }
 
 export {
-  ActorSheetMutant
+  ActorSheetGambler
 }

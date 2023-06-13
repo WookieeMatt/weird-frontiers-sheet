@@ -11,7 +11,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
         <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "mcc.Rover"}}</a>
+        <a class="item" data-tab="class">{{localize "WF.Gunslinger"}}</a>
         {{#if data.config.showSpells}}
         <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
         {{/if}}
@@ -25,7 +25,7 @@
     <section class="sheet-body">
 
         {{!-- Character Tab --}}
-        {{> systems/dcc/templates/actor-partial-pc-common.html }}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-common.html }}
 
         {{!-- Equipment Tab --}}
         {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html }}
@@ -41,35 +41,15 @@
 
         {{!-- Class Tab --}}
         <div class="tab" data-group="primary" data-tab="class">
-            <h4 class="class-label">{{localize "rover.roverAbilities"}}</h4>
+            <h4 class="class-label">{{localize "gunslinger.gunslingerAbilities"}}</h4>
             <div class="class">
-                <div class="skills-container">
-		<div class="flexrow" data-skill="Max Tech Level">
-                      <label class="flex1" for="system.skills.maxTechLevel.value">{{localize "mcc.maxTechLevel"}}</label>
-                      <input type="text" id="system.skills.maxTechLevel.value" name="system.skills.maxTechLevel.value" value="{{system.skills.maxTechLevel.value}}" data-dtype="String"/>
-                    </div>
-
-                    <div class="flexrow" data-skill="doorsAndSecurity">
-                      <label class="skill-check rollable" for="system.skills.doorsAndSecurity.value">{{localize "rover.doorsAndSecurity"}}</label>
-                      <input type="text" id="system.skills.doorsAndSecurity.value" name="system.skills.doorsAndSecurity.value" value="{{system.skills.doorsAndSecurity.value}}" data-dtype="String"/>
-                    </div>
-                    <div class="flexrow" data-skill="aiRecognition">
-                      <label class="skill-check rollable" for="system.skills.aiRecognition.value">{{localize "mcc.aiRecognition"}}</label>
-                      <input type="text" id="system.skills.aiRecognition.value" name="system.skills.aiRecognition.value" value="{{system.skills.aiRecognition.value}}" data-dtype="String"/>
-                    </div>
-					<div class="flexrow" data-skill="artifactCheck">
-                      <label class="skill-check rollable" for="system.skills.artifactCheck.value">{{localize "mcc.artifactCheck"}}</label>
-                      <input type="text" id="system.skills.artifactCheck.value" name="system.skills.artifactCheck.value" value="{{system.skills.artifactCheck.value}}" data-dtype="String"/>
-                    </div>
-					<div class="flexrow" data-skill="roverMissileAttack">
-                      <label class="flex1" for="system.skills.roverMissileAttack.value">{{localize "rover.roverMissileAttack"}}</label>
-                      <input type="text" id="system.skills.roverMissileAttack.value" name="system.skills.roverMissileAttack.value" value="{{system.skills.roverMissileAttack.value}}" data-dtype="String"/>
-                    </div>
+              <div class="skills-container">
+                <div class="deity flexrow">
+                  <label class="flex1" for="system.class.signatureWeapon">{{localize "WF.signatureWeapon"}}</label>
+                  <input class="flex2" type="text" id="system.class.signatureWeapon.value" name="system.class.signatureWeapon.value" value="{{system.class.signatureWeapon.value}}" data-dtype="Text" style="width: 200px;"/>
                 </div>
-				 <div class="deity flexrow">
-                    <label class="flex1" for="system.class.archaicAlignment">{{localize "mcc.archaicAlignment"}}</label>
-                   <input class="flex2" type="text" id="system.class.archaicAlignment.value" name="system.class.archaicAlignment.value" value="{{system.class.archaicAlignment.value}}" data-dtype="String"/>
-                </div>
+              </div>
+              <hr>
                 <ul class="class-note flexcol">
 				
                   <li>

@@ -12,6 +12,9 @@
   "styles": [
     "styles/weird-frontiers-sheet.css"
   ],
+  "module": [
+    "module/dcc.js"
+  ],
   "languages": [
     {
       "lang": "en",

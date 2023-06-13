@@ -1,7 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
  
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Bedlamite" data-dtype="String"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Mutant" data-dtype="String"/>
     <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
@@ -11,10 +11,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
         <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "WF.bedlamite"}}</a>
-        {{#if data.config.showSpells}}
-        <a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
-        {{/if}}
+        <a class="item" data-tab="class">{{localize "WF.gambler"}}</a>
         {{#if data.config.showSkills}}
         <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
         {{/if}}
@@ -30,9 +27,6 @@
         {{!-- Equipment Tab --}}
         {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html }}
 
-        {{!-- Spells Tab --}}
-        {{> systems/dcc/templates/actor-partial-wizard-spells.html }}
-
         {{!-- Skills Tab --}}
         {{> systems/dcc/templates/actor-partial-skills.html }}
 
@@ -41,8 +35,8 @@
 
         {{!-- Class Tab --}}
         <div class="tab" data-group="primary" data-tab="class">
-            <h4 class="class-label">{{localize "bedlamite.bedlamiteAbilities"}}</h4>
-             <div class="class">
+            <h4 class="class-label">{{localize "gambler.gamblerAbilities"}}</h4>
+            <div class="class">
                 <div class="skills-container">
                   <div class="deity flexrow">
                     <label class="flex1" for="system.class.signatureWeapon">{{localize "WF.signatureWeapon"}}</label>
@@ -53,22 +47,26 @@
                 <ul class="class-note flexcol">
 				
                   <li>
-                    <ul>
-                      <li>{{localize "bedlamite.achillesDesc"}}</li>
-					          </ul>
+                    {{localize "gambler.bushwhack"}}
                   </li>
-                  <h4 class="class-label">
-                    {{localize "WF.contraptions"}}
-                  </h4>
-                  <li>{{localize "bedlamite.contraptions"}}</li>  
+                  <li>
+                    {{localize "gambler.deadmansHand"}}
                   </li>
-                  <li>{{localize "WF.contraptions2"}}</li>
-                    <ul>
-                      <li>{{localize "bedlamite.contraption1"}}</li>
-                      <li>{{localize "bedlamite.contraption2"}}</li>
-                    </ul>
-                  <li>{{localize "WF.gc"}}</li>
-                  <li>{{localize "bedlamite.mechanical"}}</li>
+                  <li>
+                    {{localize "gambler.fatefulFavorite"}}
+                  </li>
+                  <li>
+                    {{localize "gambler.shadyDealings"}}
+                  </li>
+                  <li>
+                    {{localize "gambler.cheating"}}
+                  </li>
+                  <li>
+                    {{localize "gambler.highTolerance"}}
+                  </li>
+                  <li>
+                    {{localize "gambler.questionablePursuits"}}
+                  </li>
                 </div>
             </div>
         </div>

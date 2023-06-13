@@ -1,8 +1,8 @@
 /* global Actors */
 
 import * as BedlamiteSheets from './actor-sheets-bedlamite.js';
-import * as MutantSheets from './actor-sheets-mutant.js';
-import * as RoverSheets from './actor-sheets-rover.js';
+import * as GamblerSheets from './actor-sheets-gambler.js';
+import * as GunslingerSheets from './actor-sheets-gunslinger.js';
 import * as SentinelSheets from './actor-sheets-sentinel.js';
 import * as ShamanSheets from './actor-sheets-shaman.js';
 import * as CalaveraSheets from './actor-sheets-calavera.js';
@@ -18,8 +18,8 @@ Hooks.once('init', async function () {
   // Register sheet application classes
   Actors.registerSheet('wf-bedlamite', BedlamiteSheets.ActorSheetBedlamite, { types: ['Player'], label: 'bedlamite.ActorSheetBedlamite' })
   Actors.registerSheet('wf-calavera', CalaveraSheets.ActorSheetCalavera, { types: ['Player'], label: 'calavera.ActorSheetCalavera' })    
-  Actors.registerSheet('mcc-mutant', MutantSheets.ActorSheetMutant, { types: ['Player'], label: 'mutant.ActorSheetMutant' })
-  Actors.registerSheet('mcc-rover', RoverSheets.ActorSheetRover, { types: ['Player'], label: 'rover.ActorSheetRover'})
+  Actors.registerSheet('wf-gambler', GamblerSheets.ActorSheetGambler, { types: ['Player'], label: 'gambler.ActorSheetGambler' })
+  Actors.registerSheet('wf-gunslinger', GunslingerSheets.ActorSheetGunslinger, { types: ['Player'], label: 'gunslinger.ActorSheetGunslinger'})
   Actors.registerSheet('mcc-sentinel', SentinelSheets.ActorSheetSentinel, { types: ['Player'], label: 'sentinel.ActorSheetSentinel' })
   Actors.registerSheet('mcc-shaman', ShamanSheets.ActorSheetShaman, { types: ['Player'], label: 'shaman.ActorSheetShaman' })
   Actors.registerSheet('mcc-plantient', PlantientSheets.ActorSheetPlantient, { types: ['Player'], label: 'plantient.ActorSheetPlantient' })  
