@@ -1,23 +1,23 @@
 /**
- * MCC Sentinel character sheet overrides
+ * WF Hellbilly character sheet overrides
  */
 
 import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
 
 /**
- * Extend the zero-level/NPC sheet for MCC Sentinel
+ * Extend the zero-level/NPC sheet for WF Hellbilly
  * @extends {DCCActorSheet}
  */
-class ActorSheetSentinel extends DCCActorSheet {
+class ActorSheetHellbilly extends DCCActorSheet {
   /** @override */
 /**  getData () {
     const data = super.getData() **/
 async getData (options) {
     const data = await super.getData(options)
-    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-sentinel.html'
-    if (data.system.details.sheetClass !== 'Sentinel') {
+    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-hellbilly.html'
+    if (data.system.details.sheetClass !== 'Hellbilly') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('mcc.Sentinel')
+        'data.class.className': game.i18n.localize('WF.hellbilly')
       })
     }
 
@@ -67,5 +67,5 @@ if (!data.system.skills.maxTechLevel) {
 }
 
 export {
-  ActorSheetSentinel
+  ActorSheetHellbilly
 }

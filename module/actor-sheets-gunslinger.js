@@ -17,7 +17,7 @@ async getData (options) {
     this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-gunslinger.html'
 if (data.system.details.sheetClass !== 'Gunslinger') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('WF.Gunslinger')
+        'data.class.className': game.i18n.localize('WF.gunslinger')
       })
     }
 
