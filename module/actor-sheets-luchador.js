@@ -1,23 +1,23 @@
 /**
- * MCC Plantient character sheet overrides
+ * WF Luchador character sheet overrides
  */
 
 import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
 
 /**
- * Extend the zero-level/NPC sheet for MCC Plantient
+ * Extend the zero-level/NPC sheet for WF Luchador
  * @extends {DCCActorSheet}
  */
-class ActorSheetPlantient extends DCCActorSheet {
+class ActorSheetLuchador extends DCCActorSheet {
   /** @override */
 /**  getData () {
     const data = super.getData() **/
 async getData (options) {
     const data = await super.getData(options)
-    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-plantient.html'
-    if (data.system.details.sheetClass !== 'Plantient') {
+    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-luchador.html'
+    if (data.system.details.sheetClass !== 'Luchador') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('mcc.Plantient')
+        'data.class.className': game.i18n.localize('WF.luchador')
       })
     }
 
@@ -69,5 +69,5 @@ async getData (options) {
 }
 
 export {
-  ActorSheetPlantient
+  ActorSheetLuchador
 }

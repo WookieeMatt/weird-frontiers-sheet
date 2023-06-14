@@ -6,7 +6,7 @@ import * as GunslingerSheets from './actor-sheets-gunslinger.js';
 import * as HellbillySheets from './actor-sheets-hellbilly.js';
 import * as ShamanSheets from './actor-sheets-shaman.js';
 import * as CalaveraSheets from './actor-sheets-calavera.js';
-import * as PlantientSheets from './actor-sheets-plantient.js';
+import * as LuchadorSheets from './actor-sheets-luchador.js';
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -22,7 +22,7 @@ Hooks.once('init', async function () {
   Actors.registerSheet('wf-gunslinger', GunslingerSheets.ActorSheetGunslinger, { types: ['Player'], label: 'gunslinger.ActorSheetGunslinger'})
   Actors.registerSheet('wf-hellbilly', HellbillySheets.ActorSheetHellbilly, { types: ['Player'], label: 'hellbilly.ActorSheetHellbilly' })
   Actors.registerSheet('mcc-shaman', ShamanSheets.ActorSheetShaman, { types: ['Player'], label: 'shaman.ActorSheetShaman' })
-  Actors.registerSheet('mcc-plantient', PlantientSheets.ActorSheetPlantient, { types: ['Player'], label: 'plantient.ActorSheetPlantient' })  
+  Actors.registerSheet('wf-luchador', LuchadorSheets.ActorSheetLuchador, { types: ['Player'], label: 'luchador.ActorSheetLuchador' })  
    
   // Register shared template for MCC characters
   const templatePaths = [
