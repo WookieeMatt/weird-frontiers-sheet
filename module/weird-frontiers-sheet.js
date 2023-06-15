@@ -4,7 +4,8 @@ import * as BedlamiteSheets from './actor-sheets-bedlamite.js';
 import * as GamblerSheets from './actor-sheets-gambler.js';
 import * as GunslingerSheets from './actor-sheets-gunslinger.js';
 import * as HellbillySheets from './actor-sheets-hellbilly.js';
-import * as ShamanSheets from './actor-sheets-shaman.js';
+import * as MountebankSheets from './actor-sheets-mountebank.js';
+import * as MysticMonkSheets from './actor-sheets-mysticmonk.js';
 import * as CalaveraSheets from './actor-sheets-calavera.js';
 import * as LuchadorSheets from './actor-sheets-luchador.js';
 
@@ -21,14 +22,16 @@ Hooks.once('init', async function () {
   Actors.registerSheet('wf-gambler', GamblerSheets.ActorSheetGambler, { types: ['Player'], label: 'gambler.ActorSheetGambler' })
   Actors.registerSheet('wf-gunslinger', GunslingerSheets.ActorSheetGunslinger, { types: ['Player'], label: 'gunslinger.ActorSheetGunslinger'})
   Actors.registerSheet('wf-hellbilly', HellbillySheets.ActorSheetHellbilly, { types: ['Player'], label: 'hellbilly.ActorSheetHellbilly' })
-  Actors.registerSheet('mcc-shaman', ShamanSheets.ActorSheetShaman, { types: ['Player'], label: 'shaman.ActorSheetShaman' })
-  Actors.registerSheet('wf-luchador', LuchadorSheets.ActorSheetLuchador, { types: ['Player'], label: 'luchador.ActorSheetLuchador' })  
+  Actors.registerSheet('wf-luchador', LuchadorSheets.ActorSheetLuchador, { types: ['Player'], label: 'luchador.ActorSheetLuchador' })
+  Actors.registerSheet('wf-mountebank', MountebankSheets.ActorSheetMountebank, { types: ['Player'], label: 'mountebank.ActorSheetMountebank' })
+  Actors.registerSheet('wf-mysticMonk', MysticMonkSheets.ActorSheetMysticMonk, { types: ['Player'], label: 'mystickMonk.ActorSheetMysticMonk' })
    
   // Register shared template for MCC characters
   const templatePaths = [
   'modules/weird-frontiers-sheet/templates/actor-partial-pc-common.html',
   'modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html',
   'modules/weird-frontiers-sheet/templates/actor-partial-gunslinger-trick-shot.html',
+  'modules/weird-frontiers-sheet/templates/actor-partial-mystic-monk-martial-arts.html',
   'modules/weird-frontiers-sheet/templates/actor-partial-pc-mcc-header.html',
 	'modules/weird-frontiers-sheet/templates/actor-partial-mutations.html',
 	'modules/weird-frontiers-sheet/templates/actor-partial-shaman-programs.html'	

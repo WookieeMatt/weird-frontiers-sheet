@@ -1,23 +1,23 @@
 /**
- * MCC shaman character sheet overrides
+ * WF Mystic Monk character sheet overrides
  */
 
 import DCCActorSheet from '/systems/dcc/module/actor-sheet.js'
 
 /**
- * Extend the zero-level/NPC sheet for MCC Shaman
+ * Extend the zero-level/NPC sheet for WF Mystic Monk
  * @extends {DCCActorSheet}
  */
-class ActorSheetShaman extends DCCActorSheet {
+class ActorSheetMysticMonk extends DCCActorSheet {
   /** @override */
 /**  getData () {
     const data = super.getData() **/
 async getData (options) {
     const data = await super.getData(options)
-    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-shaman.html'
-    if (data.system.details.sheetClass !== 'Shaman') {
+    this.options.template = 'modules/weird-frontiers-sheet/templates/actor-sheet-mysticmonk.html'
+    if (data.system.details.sheetClass !== 'Mystic Monk') {
       this.actor.update({
-        'data.class.className': game.i18n.localize('mcc.Shaman')
+        'data.class.className': game.i18n.localize('WF.mysticMonk')
       })
     }
 
@@ -75,5 +75,5 @@ if (!data.system.skills.maxTechLevel) {
 }
 
 export {
-  ActorSheetShaman
+  ActorSheetMysticMonk
 }
