@@ -1,5 +1,12 @@
 {{!-- Notes Tab --}}
 <div class="tab" data-group="primary" data-tab="martialArts">      
+    <div class="skills-container">
+        <div class="deity flexrow" data-skill="Chi Die">
+            <label class="flex1" for="system.class.chiDie">{{localize "WF.chiDie"}}</label>
+            <input class="flex2" type="text" id="system.class.chiDie.value" name="system.class.chiDie.value" value="{{system.class.chiDie.value}}" data-dtype="Text" style="width: 50px;"/>
+        </div>
+    </div>
+    <hr>
     <div class="skills-container"></div>
         <h4 class="class-label">{{localize "mysticMonk.martialArtsManuevers"}}</h4>
         <li>
@@ -43,7 +50,7 @@
                 </tbody>
             </table>
         <li>
-            {{localize "gunslinger.lameDuck"}}
+            {{localize "mysticMonk.flyingKick"}}
         </li>
             <table class="customTable">
                 <thead>
@@ -59,28 +66,28 @@
                 </tr>
                 <tr>
                     <td class="thinRow">3</td>
-                    <td>{{localize "mysticMonk.lD1"}}</td>
+                    <td>{{localize "mysticMonk.fK1"}}</td>
                 </tr>
                 <tr>
                     <td class="thinRow">4</td>
-                    <td>{{localize "mysticMonk.lD2"}}</td>
+                    <td>{{localize "mysticMonk.fK2"}}</td>
                 </tr>
                 <tr>
                     <td class="thinRow">5</td>
-                    <td>{{localize "mysticMonk.lD3"}}</td>
+                    <td>{{localize "mysticMonk.fK3"}}</td>
                 </tr>
                 <tr>
                     <td class="thinRow">6</td>
-                    <td>{{localize "mysticMonk.lD4"}}</td>
+                    <td>{{localize "mysticMonk.fK4"}}</td>
                 </tr>
                 <tr>
                     <td class="thinRow">7+</td>
-                    <td>{{localize "mysticMonk.lD5"}}</td>
+                    <td>{{localize "mysticMonk.fK5"}}</td>
                 </tr>
                 </tbody>
             </table>
         <li>
-            {{localize "gunslinger.pistolWhip"}}
+            {{localize "mysticMonk.kipUp"}}
         </li>
             <table class="customTable">
                 <thead>
@@ -96,28 +103,28 @@
                     </tr>
                     <tr>
                         <td class="thinRow">3</td>
-                        <td>{{localize "mysticMonk.pW1"}}</td>
+                        <td>{{localize "mysticMonk.kU1"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">4</td>
-                        <td>{{localize "mysticMonk.pW2"}}</td>
+                        <td>{{localize "mysticMonk.kU2"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">5</td>
-                        <td>{{localize "mysticMonk.pW3"}}</td>
+                        <td>{{localize "mysticMonk.kU3"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">6</td>
-                        <td>{{localize "mysticMonk.pW4"}}</td>
+                        <td>{{localize "mysticMonk.kU4"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">7+</td>
-                        <td>{{localize "mysticMonk.pW5"}}</td>
+                        <td>{{localize "mysticMonk.kU5"}}</td>
                     </tr>
                 </tbody>
             </table>
         <li>
-            {{localize "gunslinger.skinTheSmokeWagon"}}
+            {{localize "mysticMonk.quiveringPalm"}}
         </li>
             <table class="customTable">
                 <thead>
@@ -133,28 +140,28 @@
                     </tr>
                     <tr>
                         <td class="thinRow">3</td>
-                        <td>{{localize "mysticMonk.sTSW1"}}</td>
+                        <td>{{localize "mysticMonk.qP1"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">4</td>
-                        <td>{{localize "mysticMonk.sTSW2"}}</td>
+                        <td>{{localize "mysticMonk.qP2"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">5</td>
-                        <td>{{localize "mysticMonk.sTSW3"}}</td>
+                        <td>{{localize "mysticMonk.qP3"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">6</td>
-                        <td>{{localize "mysticMonk.sTSW4"}}</td>
+                        <td>{{localize "mysticMonk.qP4"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">7+</td>
-                        <td>{{localize "mysticMonk.sTSW5"}}</td>
+                        <td>{{localize "mysticMonk.qP5"}}</td>
                     </tr>
                 </tbody>
             </table>
         <li>
-            {{localize "gunslinger.spinningLead"}}
+            {{localize "mysticMonk.thunderClap"}}
         </li>
             <table class="customTable">
                 <thead>
@@ -170,60 +177,23 @@
                     </tr>
                     <tr>
                         <td class="thinRow">3</td>
-                        <td>{{localize "mysticMonk.sL1"}}</td>
+                        <td>{{localize "mysticMonk.tC1"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">4</td>
-                        <td>{{localize "mysticMonk.sL2"}}</td>
+                        <td>{{localize "mysticMonk.tC2"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">5</td>
-                        <td>{{localize "mysticMonk.sL3"}}</td>
+                        <td>{{localize "mysticMonk.tC3"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">6</td>
-                        <td>{{localize "mysticMonk.sL4"}}</td>
+                        <td>{{localize "mysticMonk.tC4"}}</td>
                     </tr>
                     <tr>
                         <td class="thinRow">7+</td>
-                        <td>{{localize "mysticMonk.sL5"}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        <li>
-            {{localize "gunslinger.turnemYeller"}}
-        </li>
-            <table class="customTable">
-                <thead>
-                <tr>
-                    <th class="thinRow">Deadeye Die</th>
-                    <th>Result</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="thinRow">1-2</td>
-                        <td>{{localize "WF.noResult"}}</td>
-                    </tr>
-                    <tr>
-                        <td class="thinRow">3</td>
-                        <td>{{localize "mysticMonk.tY1"}}</td>
-                    </tr>
-                    <tr>
-                        <td class="thinRow">4</td>
-                        <td>{{localize "mysticMonk.tY2"}}</td>
-                    </tr>
-                    <tr>
-                        <td class="thinRow">5</td>
-                        <td>{{localize "mysticMonk.tY3"}}</td>
-                    </tr>
-                    <tr>
-                        <td class="thinRow">6</td>
-                        <td>{{localize "mysticMonk.tY4"}}</td>
-                    </tr>
-                    <tr>
-                        <td class="thinRow">7+</td>
-                        <td>{{localize "mysticMonk.tY5"}}</td>
+                        <td>{{localize "mysticMonk.tC5"}}</td>
                     </tr>
                 </tbody>
             </table>
