@@ -8,6 +8,7 @@ import * as MountebankSheets from './actor-sheets-mountebank.js';
 import * as MysticMonkSheets from './actor-sheets-mysticmonk.js';
 import * as CalaveraSheets from './actor-sheets-calavera.js';
 import * as LuchadorSheets from './actor-sheets-luchador.js';
+import * as OccultistSheets from './actor-sheets-occultist.js';
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -25,6 +26,7 @@ Hooks.once('init', async function () {
   Actors.registerSheet('wf-luchador', LuchadorSheets.ActorSheetLuchador, { types: ['Player'], label: 'luchador.ActorSheetLuchador' })
   Actors.registerSheet('wf-mountebank', MountebankSheets.ActorSheetMountebank, { types: ['Player'], label: 'mountebank.ActorSheetMountebank' })
   Actors.registerSheet('wf-mysticMonk', MysticMonkSheets.ActorSheetMysticMonk, { types: ['Player'], label: 'mysticMonk.ActorSheetMysticMonk' })
+  Actors.registerSheet('wf-occultist', OccultistSheets.ActorSheetOccultist, { types: ['Player'], label: 'occultist.ActorSheetOccultist' })
    
   // Register shared template for MCC characters
   const templatePaths = [
@@ -34,7 +36,7 @@ Hooks.once('init', async function () {
   'modules/weird-frontiers-sheet/templates/actor-partial-mystic-monk-martial-arts.html',
   'modules/weird-frontiers-sheet/templates/actor-partial-pc-mcc-header.html',
 	'modules/weird-frontiers-sheet/templates/actor-partial-mutations.html',
-	'modules/weird-frontiers-sheet/templates/actor-partial-shaman-programs.html'	
+	'modules/weird-frontiers-sheet/templates/actor-partial-occultist-spells.html'	
 	]
 	loadTemplates(templatePaths)
 })

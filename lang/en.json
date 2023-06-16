@@ -178,7 +178,10 @@
   "mysticMonk.tC2": "The palms of the warrior strike the ears of the target, inflicting an additional 1d6 in damage. Additionally, the target must pass a Fortitude save with a DC matching the total of the attack roll to avoid becoming momentarily deafened (stunned) for 1d4 rounds. Additionally, for the duration all rolls that are affected by hearing suffer a -1d penalty until the effect wears off.",
   "mysticMonk.tC3": "The palms of the warrior strike the ears of the target, causing eardrums to “pop,” dropping the target to their knees (counts as prone) as they scream in pain. The attack inflicts an extra 1d8 in damage. Additionally, the target must pass a Fortitude save with a DC matching the total of the attack roll to avoid becoming momentarily stunned for d6 rounds as they can do nothing but scream. All attacks and skill rolls suffer a -2d penalty until effect wears off.",
   "mysticMonk.tC4": "The palms of the warrior strike the ears of the target, causing the eardrums to “pop,” dropping the target to their knees (counts as prone) as the target screams in pain. The attack inflicts an extra 1d8 in damage and the target must pass a Fortitude save with a DC matching the total of the attack roll to avoid becoming momentarily stunned for d8 rounds as they can do nothing but scream. All attacks and skill rolls suffer a -2d penalty until effect wears off.",
-  "mysticMonk.tC5": "The mystic monk strikes with such power that both of the target’s eardrums rupture. The target immediately drops prone, suffering an additional 1d10 in damage, and the target must pass a Fortitude save with a DC matching the total of the attack roll to avoid becoming permanently deaf. All actions that require hearing suffer a -2d penalty until the target can be magically healed or a mechanical hearing aid can be invented."
-
+  "mysticMonk.tC5": "The mystic monk strikes with such power that both of the target’s eardrums rupture. The target immediately drops prone, suffering an additional 1d10 in damage, and the target must pass a Fortitude save with a DC matching the total of the attack roll to avoid becoming permanently deaf. All actions that require hearing suffer a -2d penalty until the target can be magically healed or a mechanical hearing aid can be invented.",
+  "WF.occultist": "Occultist",
+  "occultist.ActorSheetOccultist": "Occultist",
+  "occultist.occultistAbilities": "Occultist",
+  "occultist.spells": "Occultist Spells"
 
 }
