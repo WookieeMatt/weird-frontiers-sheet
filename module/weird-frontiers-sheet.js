@@ -33,7 +33,7 @@ Hooks.once('init', async function () {
   Actors.registerSheet('wf-occultist', OccultistSheets.ActorSheetOccultist, { types: ['Player'], label: 'occultist.ActorSheetOccultist' })
   Actors.registerSheet('wf-revelator', RevelatorSheets.ActorSheetRevelator, { types: ['Player'], label: 'revelator.ActorSheetRevelator' })
   Actors.registerSheet('wf-sin-eater', SinEaterSheets.ActorSheetSinEater, { types: ['Player'], label: 'sin-eater.ActorSheetSinEater' })
-  Actors.registerSheet('wf-tommyknocker', TommyknockerSheets.ActorSheetTommyknocker, { types: ['Player'], label: 'tommyknocer.ActorSheetTommyknocker' })
+  Actors.registerSheet('wf-tommyknocker', TommyknockerSheets.ActorSheetTommyknocker, { types: ['Player'], label: 'tommyknocker.ActorSheetTommyknocker' })
    
   // Register shared template for MCC characters
   const templatePaths = [
