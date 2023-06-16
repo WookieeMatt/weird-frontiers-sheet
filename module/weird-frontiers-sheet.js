@@ -10,6 +10,7 @@ import * as CalaveraSheets from './actor-sheets-calavera.js';
 import * as LuchadorSheets from './actor-sheets-luchador.js';
 import * as OccultistSheets from './actor-sheets-occultist.js';
 import * as RevelatorSheets from './actor-sheets-revelator.js';
+import * as SinEaterSheets from './actor-sheets-sin-eater.js';
 
 
 /* -------------------------------------------- */
@@ -30,6 +31,7 @@ Hooks.once('init', async function () {
   Actors.registerSheet('wf-mysticMonk', MysticMonkSheets.ActorSheetMysticMonk, { types: ['Player'], label: 'mysticMonk.ActorSheetMysticMonk' })
   Actors.registerSheet('wf-occultist', OccultistSheets.ActorSheetOccultist, { types: ['Player'], label: 'occultist.ActorSheetOccultist' })
   Actors.registerSheet('wf-revelator', RevelatorSheets.ActorSheetRevelator, { types: ['Player'], label: 'revelator.ActorSheetRevelator' })
+  Actors.registerSheet('wf-sin-eater', SinEaterSheets.ActorSheetSinEater, { types: ['Player'], label: 'sin-eater.ActorSheetSinEater' })
    
   // Register shared template for MCC characters
   const templatePaths = [
