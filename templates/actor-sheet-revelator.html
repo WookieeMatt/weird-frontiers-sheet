@@ -1,7 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
  
     {{!-- Hidden inputs to reflect the sheet class and force standard crit range --}}
-    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Luchador" data-dtype="String"/>
+    <input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Revelator" data-dtype="String"/>
     <input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
 
     {{!-- Sheet Header --}}
@@ -11,8 +11,8 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
         <a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
-        <a class="item" data-tab="class">{{localize "WF.occultist"}}</a>
-        <a class="item" data-tab="spells">{{localize "occultist.spells"}}</a>
+        <a class="item" data-tab="class">{{localize "WF.revelator"}}</a>
+        <a class="item" data-tab="spells">{{localize "revelator.miracles"}}</a>
         {{#if data.config.showSkills}}
         <a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
         {{/if}}
@@ -29,7 +29,7 @@
         {{> modules/weird-frontiers-sheet/templates/actor-partial-pc-equipment.html }}
 
         {{!-- Spells Tab --}}
-        {{> modules/weird-frontiers-sheet/templates/actor-partial-occultist-spells.html }}
+        {{> modules/weird-frontiers-sheet/templates/actor-partial-revelator-miracles.html }}
 
         {{!-- Skills Tab --}}
         {{> systems/dcc/templates/actor-partial-skills.html }}
@@ -39,7 +39,7 @@
 
         {{!-- Class Tab --}}
         <div class="tab" data-group="primary" data-tab="class">
-            <h4 class="class-label">{{localize "occultist.occultistAbilities"}}</h4>
+            <h4 class="class-label">{{localize "revelator.revelatorAbilities"}}</h4>
             <div class="class">
               <div class="skills-container">
                 <div class="deity flexrow" data-skill="Signature Weapon">
@@ -50,25 +50,34 @@
               <hr>
                 <ul class="class-note flexcol">
                   <li>
-                    {{localize "occultist.6thSense"}}
+                    {{localize "revelator.battleHardened"}}
                   </li>
 				          <li>
-                    {{localize "occultist.arcaneArts"}}
+                    {{localize "revelator.fame"}}
                   </li>
 				          <li>
-                    {{localize "occultist.danceWithTheDevil"}}
+                    {{localize "revelator.flare"}}
                   </li>
                   <li>
-                    {{localize "occultist.familiar"}}
+                    {{localize "revelator.muscleOil"}}
                   </li>
                   <li>
-                    {{localize "occultist.investigation"}}
+                    {{localize "revelator.signatureMove"}}
                   </li>
                   <li>
-                    {{localize "occultist.scribing"}}
-                  </li>
-                  <li>
-                    {{localize "occultist.spellburn"}}
+                    {{localize "revelator.spiritMask"}}
+                    <ul>
+                      <li>{{localize "revelator.spiritArmor"}}</li>
+                      <li>{{localize "revelator.boundingLeap"}}</li>
+                      <li>{{localize "revelator.battleCry"}}</li>
+                      <li>{{localize "revelator.strengthOfTheBull"}}</li>
+                      <li>{{localize "revelator.oneManArmy"}}</li>
+                      <li>{{localize "revelator.eyeOfTheCat"}}</li>
+                      <li>{{localize "revelator.indomitableWall"}}</li>
+                      <li>{{localize "revelator.devilsBane"}}</li>
+                      <li>{{localize "revelator.righteousTalons"}}</li>
+                      <li>{{localize "revelator.tagTeam"}}</li>
+                    </ul>
                   </li>
                 </div>
             </div>
