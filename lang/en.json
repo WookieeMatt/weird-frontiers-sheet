@@ -216,6 +216,8 @@
   "sin-eater.shadowWalk": "Shadow walk (cost of 2 temporary Personality points): Shadow walk grants limited mastery over the realm of shadow that permeates the land of the living and that of the dead. Use of the rite grants the ability to use that shadow to assist with stealth and travel. See the complete writeup further down.",
   "sin-eater.riverRites": "River Rites: Ferrymen all know a set of rites; taught to them by Charon himself. The rites serve to protect and aid the shepherd as they usher their precious cargo to the afterlife. The rites also serve the sineater well with their mission in the land of the living.",
   "sin-eater.corvusCorax": "Corvus corax (cost of 2 temporary Personality points): Corvus corax (or raven’s call) is a rite that opens a portal directly to the underworld which pours forth a flock of Stygian ravens to aid and protect the sin-eater. See the complete write-up further down.",
-  "sin-eater.ferrymansReprieve": "Ferryman’s reprieve (cost of 2 temporary Personality points): Ferryman’s reprieve helps protect sin-eaters when faced with overwhelming odds—offering a supernatural barrier that helps repel malevolent forces. See the complete writeup further down."
-
+  "sin-eater.ferrymansReprieve": "Ferryman’s reprieve (cost of 2 temporary Personality points): Ferryman’s reprieve helps protect sin-eaters when faced with overwhelming odds—offering a supernatural barrier that helps repel malevolent forces. See the complete writeup further down.",
+  "WF.tommyknocker": "Tommyknocker",
+  "tommyknocker.ActorSheetTommyknocker": "Tommyknocker",
+  "tommyknocker.tommyknockerAbilities": "Tommyknocker Abilities"
 }
